@@ -34,9 +34,9 @@ class StudentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    { 
         student::create($request->all());
-        return view('reg_student'); 
+        return redirect()->route('stu');
     }
 
     /**
@@ -47,7 +47,7 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        return "This is show method";
+        return view('student_view');
     }
 
     /**

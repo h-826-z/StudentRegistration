@@ -24,5 +24,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/login_student',function(){
 //     return view('login_student');
 // });
-Route::Resource('/ucsm','StuController');
+Route::Resource('/ucsm','StudentController');
+Route::get('students','StuViewController@index')->name('stu'); 
 
